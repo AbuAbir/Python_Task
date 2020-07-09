@@ -116,7 +116,9 @@ while True:
     if odd_count == 5 and even_count == 5:
         break
     value = int(input("Please enter any number in the range of 1-50: "))
-    
+    if value<1 or value>50:
+        print("Check again the input range insertion condition")
+        continue
     if value%2 == 0 and odd_count <=5:
         even_list.append(value)
         odd_count+=1
